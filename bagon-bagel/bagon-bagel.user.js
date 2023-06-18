@@ -15,8 +15,8 @@
 
 let params = new URLSearchParams(window.location.search);
 if (!(params.has('bagon'))) { 
-  params.set('bagon', '1')
+  params.set('bagon', '1');
   window.location.search = params.toString();
 }
 
-document.querySelector('.react_song_page_preview_link').style = "display:none;"
+document.querySelector('.react_song_page_preview_link').style = "display:none;";
