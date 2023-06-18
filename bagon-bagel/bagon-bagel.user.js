@@ -3,7 +3,9 @@
 // @description Redirect to the old song page on Genius by default
 // @icon        https://assets.genius.com/images/apple-touch-icon.png
 // @match       https://genius.com/*-lyrics
+// @match       https://genius.com/*-lyrics?*
 // @match       https://genius.com/*-annotated
+// @match       https://genius.com/*-annotated?*
 // @grant       none
 // @version     1.0.0
 // @author      JBMagination, et al.
