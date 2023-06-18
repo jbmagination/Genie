@@ -1,2 +1,1 @@
-# genie
-Genius.com userscripts
+https://jbmagination.com/genie
