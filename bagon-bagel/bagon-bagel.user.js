@@ -10,7 +10,7 @@
 // @version     1.0.0
 // @author      JBMagination, et al.
 // @namespace   JBMagination
-// @run-at      document-idle
+// @run-at      document-start
 // @homepageURL https://jbmagination.com/genie/bagon-bagel
 // @downloadURL https://jbmagination.com/genie/bagon-bagel/bagon-bagel.user.js
 // @supportURL  https://genius.com/JBMagination
@@ -23,3 +23,4 @@ if (!(params.has('bagon'))) {
 }
 
 document.querySelector('.react_song_page_preview_link').style = "display:none;";
+document.querySelector('.OptOutButton__Container-e48zu0-0').style = "display:none;";
