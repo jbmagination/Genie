@@ -8,6 +8,7 @@
 // @version     1.0.0
 // @author      JBMagination, et al.
 // @namespace   JBMagination
+// @run-at      document-idle
 // @homepageURL https://jbmagination.com/genie/bagon-bagel
 // @downloadURL https://jbmagination.com/genie/bagon-bagel/bagon-bagel.user.js
 // @supportURL  https://genius.com/JBMagination
