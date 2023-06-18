@@ -1,16 +1,12 @@
 // ==UserScript==
 // @name        Genius.com dual artist/user bio
 // @description Show both artist and user bios on verified profiles
-// @icon        https://jbmagination.com/genie/verified-dual-bios/icon.png
+// @icon        https://jbmagination.com/genie/icons/verified.png
 // @match       https://genius.com/*
 // @grant       none
 // @version     0.0.1
-// @downloadURL https://jbmagination.com/genie/verified-dual-bios/verified-dual-bios.user.js
-// @supportURL  https://genius.com/JBMagination
-// @homepageURL https://jbmagination.com/genie/verified-dual-bios
 // @author      JBMagination, et al.
 // @namespace   JBMagination
-// @noframes
 // ==/UserScript==
 
 let path = false;
@@ -61,12 +57,23 @@ else {
                 createBioSection(child);
                 
                 if (index == bioData.dom.children.length - 1) {
-                    if (document.querySelector("[ng-if='$ctrl.user.about_me.html']") && document.querySelector("[ng-if='$ctrl.user.about_me.html']"))
-                    var bioPane = document.createElement('div');
-                    bioPane.classList.add('u-top_margin');
-                    bioPane.setAttribute('ng-switch', '$ctrl.display_as_artist()');
-                    bioPane.innerHTML = `<profile-user-pane ng-switch-when="false" user="ctrl-user" on-statistics-select="$ctrl.change_state('description'); $ctrl.filter_activity_by_type(statistics_type)'"><div class="white-container"><div class="rich-text-formatting"><div ng-if="$ctrl.user.about_me.html" ng-bind-html="$ctrl.user.about_me.html">${bio}</div></div></div>`;
-                    insertAfter(bioPane, document.querySelector("[ng-if='$ctrl.user.about_me.html']").parentNode.parentNode);
+                    if (document.querySelector("[ng-if='$ctrl.user.about_me.html']") && document.querySelector("[ng-if='variants.isDescription']")) return;
+                    else if (document.querySelector("[ng-if='$ctrl.user.about_me.html']")) {
+                        if ((bio == '<p>?</p>') && (profileType == 'users')) return;
+                        else {
+                            var bioPane = document.createElement('div');
+                            bioPane.classList.add('u-top_margin');
+                            bioPane.setAttribute('ng-switch', '$ctrl.display_as_artist()');
+                            bioPane.innerHTML = `<profile-user-pane ng-switch-when="false" user="ctrl-user" on-statistics-select="$ctrl.change_state('description'); $ctrl.filter_activity_by_type(statistics_type)'"><div class="white-container"><div class="rich-text-formatting"><div ng-if="$ctrl.user.about_me.html" ng-bind-html="$ctrl.user.about_me.html">${bio}</div></div></div>`;
+                            insertAfter(bioPane, document.querySelector("[ng-if='$ctrl.user.about_me.html']").parentNode.parentNode);    
+                        }
+                    } 
+                    else if (document.querySelector("[ng-if='variants.isDescription']")) {
+                        if (bio == '') return;
+                        else {
+                            alert(bio);
+                        }
+                    }
                 }
             })
         })
