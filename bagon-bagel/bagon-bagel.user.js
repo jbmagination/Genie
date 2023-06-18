@@ -22,5 +22,7 @@ if (!(params.has('bagon'))) {
   window.location.search = params.toString();
 }
 
-document.querySelector('.react_song_page_preview_link').style = "display:none;";
-document.querySelector('.OptOutButton__Container-e48zu0-0').style = "display:none;";
+window.onload = () => {
+  document.querySelector('.react_song_page_preview_link').style = "display:none;";
+  document.querySelector('.OptOutButton__Container-e48zu0-0').style = "display:none;";
+}
