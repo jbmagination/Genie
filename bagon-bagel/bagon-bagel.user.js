@@ -1,13 +1,16 @@
 // ==UserScript==
-// @name         Bagon Bagel
-// @namespace    JBMagination
-// @version      1.0.0
-// @description  Redirect to the old song page on Genius by default
-// @author       JBMagination, et al.
-// @match        https://genius.com/*lyrics
-// @match        https://genius.com/*annotated
-// @icon         https://assets.genius.com/images/apple-touch-icon.png
-// @grant        none
+// @name        Bagon Bagel
+// @description Redirect to the old song page on Genius by default
+// @icon        https://assets.genius.com/images/apple-touch-icon.png
+// @match       https://genius.com/*lyrics
+// @match       https://genius.com/*annotated
+// @grant       none
+// @version     1.0.0
+// @author      JBMagination, et al.
+// @namespace   JBMagination
+// @homepageURL https://jbmagination.com/genie/bagon-bagel
+// @downloadURL https://jbmagination.com/genie/bagon-bagel/bagon-bagel.user.js
+// @supportURL  https://genius.com/JBMagination
 // ==/UserScript==
 
 let params = new URLSearchParams(window.location.search);
