@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Genius.com dual artist/user bio
+// @name        Verified dual bios
 // @description Show both artist and user bios on verified profiles
 // @icon        https://jbmagination.com/genie/icons/verified.png
 // @match       https://genius.com/*
