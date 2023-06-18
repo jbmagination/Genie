@@ -1,15 +1,17 @@
 // ==UserScript==
 // @name        Verified dual bios
 // @description Show both artist and user bios on verified profiles
-// @icon        https://jbmagination.com/genie/icons/verified.png
+// @icon        https://jbmagination.com/genie/verified-dual-bios/icon.png
 // @match       https://genius.com/*
 // @grant       none
 // @version     0.0.1
 // @author      JBMagination, et al.
 // @namespace   JBMagination
 // @run-at      document-idle
+// @homepageURL https://jbmagination.com/genie/verified-dual-bios
+// @downloadURL https://jbmagination.com/genie/verified-dual-bios/verified-dual-bios.user.js
+// @supportURL  https://genius.com/JBMagination
 // ==/UserScript==
-
 let path = false;
 if (!(document.querySelector('meta[name="newrelic-resource-path"]').content)) void(0);
 else path = document.querySelector('meta[name="newrelic-resource-path"]').content;
