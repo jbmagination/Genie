@@ -1,1 +1,31 @@
-<p>making homepage</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home | Genie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="./style.css" rel="stylesheet" integrity="sha384-iKJnVXn6gqNKW+2ZNicO1XxI7O84GnvtYdL0kjg3IfrqMT3OAD1lfzQXKXjB7HNI" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1><u><i>Genie is a home for Genius userscripts</i></u></h1>
+    <h2>Bagon Bagel | <a href="./bagon-bagel.user.js">Install</a></h2>
+    <h3>Redirect to the old song page on Genius by default</h3>
+    <p>•</p>
+    <div>
+      <p>Redirect to the old song page on Genius by default</p>
+    </div>
+    <p>•</p>
+    <p style="font-size:75%"><a href="https://jbmagination.com">i make stuff</a> | <a href="mailto:business@jbmagination.com">business inquiries</h2>
+    <script>
+      Array.from(document.getElementsByTagName('a')).forEach((a) => {
+        a.addEventListener("click", (event) => {
+          event.preventDefault();
+          var hostname = new URL(event.currentTarget.href).hostname;
+          var sameHost = ((hostname == window.location.hostname) || (hostname == 'jbmagination.com') || (hostname == ''));
+          if (sameHost) window.location = event.currentTarget.href;
+          else if (confirm('You\'re about to head to ' + hostname + ', which follows a different privacy policy.')) window.location = event.currentTarget.href;
+        });
+      });
+    </script>
+  </body>
+</html>
