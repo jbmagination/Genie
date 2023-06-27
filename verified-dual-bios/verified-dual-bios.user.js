@@ -44,7 +44,7 @@ else {
                 } else {
                     bio = bio + `<${element.tag}`
                     if (element.attributes) for (var key in element.attributes) {
-                        bio = bio + ` ${key}="${element.attributes['key']}"`
+                        bio = bio + ` ${key}="${element.attributes[key]}"`
                     }
                     bio = bio + `>`
                     if (element.children) element.children.forEach((child, index) => {
