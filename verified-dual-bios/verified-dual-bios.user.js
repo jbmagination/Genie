@@ -40,7 +40,7 @@ else {
             
             async function createBioSection(element) {
                 if (isString(element)) {
-                    bio = bio + '\n\n\n(string)\n' //debugging
+                    bio = bio + '\n\n'
                 } else {
                     bio = bio + `<${element.tag}`
                     if (element.attributes) for (var key in element.attributes) {
