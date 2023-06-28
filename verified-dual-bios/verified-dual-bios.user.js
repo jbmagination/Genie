@@ -69,7 +69,7 @@ else {
                             var bioPane = document.createElement('div');
                             bioPane.classList.add('u-top_margin');
                             bioPane.setAttribute('ng-switch', '$ctrl.display_as_artist()');
-                            bioPane.innerHTML = `<div class="white_container"><div class="rich-text-formatting"><div ng-if="$ctrl.user.about_me.html" ng-bind-html="$ctrl.user.about_me.html">${bio}</div></div></div>`;
+                            bioPane.innerHTML = `<div class="white_container"><div class="rich_text_formatting"><div ng-if="$ctrl.user.about_me.html" ng-bind-html="$ctrl.user.about_me.html">${bio}</div></div></div>`;
                             insertAfter(bioPane, document.querySelector("[ng-if='$ctrl.user.about_me.html']").parentNode.parentNode);    
                         }
                     } 
@@ -79,7 +79,7 @@ else {
                             var bioPane = document.createElement('div');
                             bioPane.classList.add('u-top_margin');
                             bioPane.setAttribute('ng-switch', '$ctrl.display_as_artist()');
-                            bioPane.innerHTML = `<profile-user-pane ng-switch-when="false" user="ctrl-user" on-statistics-select="$ctrl.change_state('description'); $ctrl.filter_activity_by_type(statistics_type)'"><div class="white_container"><div class="rich-text-formatting"><div ng-if="$ctrl.user.about_me.html" ng-bind-html="$ctrl.user.about_me.html">${bio}</div></div></div>`;
+                            bioPane.innerHTML = `<profile-user-pane ng-switch-when="false" user="ctrl-user" on-statistics-select="$ctrl.change_state('description'); $ctrl.filter_activity_by_type(statistics_type)'"><div class="white_container"><div class="rich_text_formatting"><div ng-if="$ctrl.user.about_me.html" ng-bind-html="$ctrl.user.about_me.html">${bio}</div></div></div>`;
                             insertAfter(bioPane, document.querySelector("[ng-if='variants.isDescription']").parentNode.parentNode.parentNode.parentNode);    
                         }
                     }
